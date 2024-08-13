@@ -1,0 +1,84 @@
+
+.register-container {
+  background-image: url('../factoryImage/sugarfactory6.png'); /* Path to your image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150vh;
+    background-color: #f4f9fc;
+    padding: 20px;
+    box-sizing: border-box;
+   
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(246, 222, 3, 0.997);
+  }
+  
+  .register-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: snow;
+    
+  }
+  
+
+  
+  .register-container form div {
+    margin-bottom: 15px;
+    
+  }
+  
+  .register-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .register-container input,
+  .register-container select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .register-container button {
+    width: 48%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 4%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .register-container button:hover
+  {
+    background-color: #ffcf40;
+    transform: scale(1.05);
+  }
+  
+  .register-container button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .register-container button[type="button"] {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .register-container .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .register-container .success-message {
+    color: green;
+    margin-top: 10px;
+  }
+  

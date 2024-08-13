@@ -1,0 +1,80 @@
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #ccc4c4; /* Optional: Background for better contrast */
+  }
+  
+  .carousel-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+  }
+  
+  .carousel-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensures buttons are positioned relative to the card */
+    overflow: hidden; /* Hides overflow content */
+  }
+  
+  .carousel-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd; /* Optional: border around the image */
+    margin: 0 auto; /* Centers the image */
+  }
+  
+  .carousel-content {
+    margin-top: 20px; /* Adds space between image and content */
+    text-align: center; /* Centers text */
+  }
+  
+  .carousel-name {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .carousel-review {
+    font-size: 1em;
+    margin-top: 10px;
+    color: #555;
+    word-wrap: break-word; /* Ensures long words break and stay within the card */
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 1.5em;
+    border-radius: 50%;
+    width: 40px; /* Adjust width and height for button size */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-button.next {
+    right: 10px;
+  }
+  

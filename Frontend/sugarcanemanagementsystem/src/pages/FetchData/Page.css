@@ -1,0 +1,95 @@
+.customer-page-container {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f9fc;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.customer-page-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+.customer-page-container button{
+  width: 30%;
+  transition: background-color 0.3s;
+  margin-top: -10px;
+}
+.customer-page-container button:hover{
+  background-color: #ffcf40;
+  
+    transform: scale(1.05);
+}
+
+.search-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-toggle button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  width: 30%;
+  transition: background-color 0.3s;
+}
+
+.search-toggle button:hover {
+  background-color: #ffcf40;
+  
+    transform: scale(1.05);
+}
+
+.aadhar-input-container {
+  margin-bottom: 20px;
+}
+
+.aadhar-input-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.aadhar-input-container input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+/* .aadhar-input-container button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+} */
+
+.aadhar-input-container button:hover {
+  background-color: #ffcf40;
+  transform: scale(1.05);
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}

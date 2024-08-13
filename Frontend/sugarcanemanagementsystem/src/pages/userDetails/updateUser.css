@@ -1,0 +1,63 @@
+.update-user-page {
+    background-image: url('../factoryImage/sugarfactory6.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    max-width: 100%;
+    
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: #f4f9fc; */
+    background-color: #FFDE4D;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-user-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.update-user-page form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 36%;
+}
+
+.update-user-page label {
+    margin-bottom: 10px;
+}
+
+.update-user-page input {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.update-user-page button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.update-user-page button:hover {
+    transform: scale(1.05);
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}

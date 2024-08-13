@@ -1,0 +1,77 @@
+.about {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0; /* Remove padding around the container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.row-gap {
+  margin: 0; /* Remove extra margin */
+}
+
+.image-col,
+.text-col {
+  padding: 0; /* Remove padding to eliminate gaps */
+  margin: 0; /* Remove margin to eliminate gaps */
+}
+
+.image-col {
+  display: flex;
+  justify-content: center;
+}
+
+.text-col {
+  display: flex;
+  align-items: center; /* Center text vertically */
+  background-color: rgb(103, 73, 77); /* Red background color */
+  padding: 20px; /* Add padding to give some space around the text */
+  color: white; /* Set text color to white */
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.aboutp {
+  margin: 0; /* Remove margin around the text */
+}
+
+.about-image-container {
+  text-align: center; /* Center the image horizontally in its container */
+  margin: 0; /* Remove left margin to eliminate the gap */
+  padding: 0; /* Remove padding to eliminate gaps */
+}
+
+@media (max-width: 768px) {
+  .about-image-container {
+    margin: 0; /* Ensure no left margin on smaller screens */
+  }
+}
+
+
+
+
+.overlay-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center text horizontally and vertically */
+  background-color: rgba(211, 211, 211, 0.7); /* Light gray with transparency */
+  color: white; /* White text color */
+  padding: 20px; /* Padding around the text */
+  border-radius: 8px; /* Optional: Rounded corners for the background */
+  text-align: center; /* Center the text */
+  max-width: 90%; /* Ensure text container does not exceed image width */
+  box-sizing: border-box;
+}
+
+.overlay-text p {
+  margin: 0; /* Remove margin around the paragraph */
+}
+
+@media (max-width: 768px) {
+  .overlay-text {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}

@@ -1,0 +1,263 @@
+.reg-cont {
+  background-image: url('../pages/factoryImage/sugarfactory6.png'); /* Path to your image */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 130vh;
+    background-color: #f4f9fc;
+    padding: 20px;
+    box-sizing: border-box;
+   
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(246, 222, 3, 0.997);
+  }
+
+  .reg-farm{
+    background-image: url('../pages/factoryImage/sugarfactory6.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      background-color: #f4f9fc;
+      padding: 20px;
+      box-sizing: border-box;
+     
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(246, 222, 3, 0.997);
+    }
+
+    .reg-salary
+    {
+      background-image: url('../pages/factoryImage/sugarfactory6.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f4f9fc;
+      padding: 20px;
+      box-sizing: border-box;
+     
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(246, 222, 3, 0.997);
+    }
+  
+  .register-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center; /* Center the icon and text */
+  }
+  
+  .register-icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+    margin-right: 10px; /* Space between the icon and the text */
+  }
+  
+  .reg-cont h2  {
+    color: #f4f9fc;
+    margin: 0;
+  }
+  .reg-farm h2  {
+    margin: 0;
+    color:snow;
+  }
+  .reg-salary h2
+  {
+    margin: 0;
+    color:snow;
+  }
+  
+  .reg-cont form div {
+    margin-bottom: 15px;
+  }
+
+  .reg-farm form div {
+    margin-bottom: 15px;
+  }
+
+  .reg-salary form div {
+    margin-bottom: 15px;
+  }
+  
+  .reg-cont label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+
+  .reg-farm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .reg-salary label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  
+  .reg-cont input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  .reg-farm input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  .reg-salary input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .reg-farm button {
+    width: 48%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 4%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 20%;
+  }
+
+  .reg-salary button {
+    width: 48%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 4%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 20%;
+  }
+
+  .reg-cont button {
+    width: 48%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 4%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 20%;
+  }
+
+
+  
+
+  .reg-cont button:hover
+  {
+    background-color: #ffcf40;
+    transform: scale(1.05);
+  }
+
+
+  .reg-farm button:hover
+  {
+    background-color: #ffcf40;
+    transform: scale(1.05);
+  }
+
+  .reg-salary button:hover
+  {
+    background-color: #ffcf40;
+    transform: scale(1.05);
+  }
+
+
+  
+  .reg-cont button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .reg-farm button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .reg-salary button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+
+  
+  .reg-cont  button[type="button"] {
+    background-color: #f44336;
+    color: white;
+  }
+
+  .reg-farm button[type="button"] {
+    background-color: #f44336;
+    color: white;
+  }
+
+  .reg-salary button[type="button"] {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .reg-cont .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+
+  .reg-farm .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+
+  .reg-salary .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+
+
+  
+  .reg-cont .success-message {
+    color: green;
+    margin-top: 10px;
+  }
+
+  .reg-farm .success-message {
+    color: green;
+    margin-top: 10px;
+  }
+
+
+  .reg-salary .success-message {
+    color: green;
+    margin-top: 10px;
+  }
+  

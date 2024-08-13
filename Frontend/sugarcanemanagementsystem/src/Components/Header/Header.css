@@ -1,0 +1,44 @@
+/* src/Navbar.css */
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+.header{
+    
+    background-color: #CBE2B5;
+    height:80px;
+    border-style: hidden;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    
+    
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+.nav-dropdown-item {
+    font-size: 0.9rem;
+    justify-content: space-around;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    color: #1d0303;
+}
+
+

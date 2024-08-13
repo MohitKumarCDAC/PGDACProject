@@ -1,0 +1,83 @@
+.feedback-form {
+    background-image: url('../factoryImage/sugarfactory6.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* height: 70vh; Full viewport height */
+      background-color: #f4f9fc;
+      padding: 20px;
+      box-sizing: border-box;
+     
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(246, 222, 3, 0.997);
+}
+/* .feedback-form form{
+    margin-left: 35%;
+    
+    
+} */
+.feedback-form form {
+    
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%; /* Ensure the form takes full width within its container */
+}
+
+
+.feedback-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.feedback-form .button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.feedback-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: #ffcf40;
+    transform: scale(1.05);
+}
+
+.feedback-form .error {
+    color: red;
+    text-align: center;
+}
+
+.feedback-form .success {
+    color: green;
+    text-align: center;
+}

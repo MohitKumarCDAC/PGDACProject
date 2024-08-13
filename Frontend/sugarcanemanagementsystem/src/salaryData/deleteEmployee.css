@@ -1,0 +1,66 @@
+/* src/pages/employee/DeleteEmployeePage.css */
+.delete-container {
+    background-image: url('../pages/factoryImage/sugarfactory6.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 60vh;
+      background-color: #f4f9fc;
+      padding: 20px;
+      box-sizing: border-box;
+     
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(246, 222, 3, 0.997);
+}
+
+.delete-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.delete-container h1{
+    color: #f4f9fc;
+    margin: 10px;
+}
+
+.delete-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #ffcf40;
+    transform: scale(1.05);
+}
+
+.success-message {
+    color: #28a745;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 18px;
+    margin-top: 10px;
+}

@@ -1,0 +1,78 @@
+.brownsugar {
+    text-align: center; /* Center the content within the div */
+    padding: 20px;
+  }
+
+  .jaggery
+  {
+    text-align: center; /* Center the content within the div */
+    padding: 20px;
+  }
+
+  .molasses
+  {
+    text-align: center; /* Center the content within the div */
+    padding: 20px;
+  }
+
+  .refindsugar
+  {
+    text-align: center; /* Center the content within the div */
+    padding: 20px;
+  }
+
+  .brownsugar-container {
+    max-width: 100%; /* Ensure container fits within available width */
+    margin: 0 auto; /* Center the image container horizontally */
+  }
+  
+  .bs-image {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 400px; /* Limit maximum height */
+    object-fit: fill; /* Ensure the image covers the container */
+    display: block; /* Remove extra space below the image */
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+  }
+  
+  /* Optional: Hover effect */
+  .bs-image:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+  }
+  
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+    .bs-image {
+      max-height: 300px; /* Adjust max height for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .bs-image {
+      max-height: 200px; /* Further adjust max height for very small screens */
+    }
+  }
+
+  .bss-image
+  {
+    border: 5px;
+    border-radius: 10px; 
+  }
+  .bss-image:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+  }
+
+  .list
+  {
+    text-align: left;
+  }
+
+  .description
+  {
+    text-align: left;
+  }
+
+  
+
+
+  

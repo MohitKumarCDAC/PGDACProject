@@ -1,0 +1,46 @@
+.main-1{
+    background-image: url("sugarfactory2.jpg");
+   height: 70vh;
+  
+}
+
+.mn-2{
+    background-image: url("sugarfactory2.jpg");
+    height: 40vh;
+}
+
+.mn-3{
+    background-image: url("sugarfactory3.jpg");
+    height: 40vh;
+}
+
+.mn-4{
+    background-image: url("sugarfactory4.jpg");
+    height: 40vh;
+}
+
+.mn-5{
+    background-image: url("sugarfactory5.png");
+    height: 40vh;
+    
+}
+.mn-6{
+    background-image: url("sugarfactory6.png");
+    height: 40vh;
+   
+}
+
+
+.main-1, .mn-2, .mn-3, .mn-4, .mn-5, .mn-6 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* This makes the image cover the container */
+    width: 100%;
+    border-style: groove;
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+   
+}
+
+.mn-1:hover, .mn-2:hover, .mn-3:hover, .mn-4:hover, .mn-5:hover, .mn-6:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}

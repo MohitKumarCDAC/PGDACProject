@@ -1,0 +1,51 @@
+.home-container
+{
+    background-color: #f0f0f0; 
+   margin-top: 5px;
+    
+}
+.mn-1
+{
+    width: 100%;
+    border-style: groove;
+    border-radius: 5px;
+    object-fit: fill;
+    display: block;
+    /* smooth zoom effect */
+    transition: transform 0.3s ease; 
+}
+
+.projectname
+{
+    margin-top: 190px;
+    border: 10px;
+    color: rgb(232, 228, 228);
+    border-style:hidden;
+    background-color: rgba(89, 98, 98, 0.579);
+    width: 100%;
+    padding-top: 7px;
+    margin-left: 1px;
+    height: 50px;
+    font-family: Georgia Bold;
+    
+}
+
+.paravalues
+{
+    
+    text-align: left;
+    color: rgb(126, 63, 139);
+   font-family: Georgia Bold;
+   
+}
+.para{
+    margin-top: 20px;
+}
+
+.mission
+{
+    text-align: left;
+    color: rgb(126, 63, 139);
+   font-family: Georgia Bold;
+
+}
