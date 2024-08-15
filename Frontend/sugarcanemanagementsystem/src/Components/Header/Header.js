@@ -72,6 +72,11 @@ const Header = () => {
 
                         {userInfo?.role === 'ACCOUNTANT' && (
                             <>
+                            {/* registration page */}
+                            <NavDropdown title="Registration Page" id="basic-nav-dropdown">
+                                    <NavDropdown.Item as={NavLink} to="/Registration">Registration Page</NavDropdown.Item>
+                                </NavDropdown>
+ 
                                 
                                 <NavDropdown title="Products" id="products-dropdown">
                                     <NavDropdown.Item as={NavLink} to="/RefinedSugar">Refined Sugar</NavDropdown.Item>

@@ -58,7 +58,7 @@ const EmployeeRegister = () => {
           />
         </div>
         <div>
-          <label>Farmer Name:</label>
+          <label>Employee Name:</label>
           <input
             type="text"
             name="name"

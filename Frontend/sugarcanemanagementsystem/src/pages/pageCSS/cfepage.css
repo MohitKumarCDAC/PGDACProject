@@ -74,8 +74,9 @@
   .aadhar-input-container button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
+    background-color:snow;
+    color: black;
+    
     width: 20%;
     border: none;
     margin-left: 10px;

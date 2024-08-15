@@ -58,7 +58,7 @@ const CustomerRegister = () => {
           />
         </div>
         <div>
-          <label>Farmer Name:</label>
+          <label>Customer Name:</label>
           <input
             type="text"
             name="customerName"

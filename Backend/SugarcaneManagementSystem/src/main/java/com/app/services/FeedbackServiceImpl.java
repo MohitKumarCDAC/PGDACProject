@@ -5,6 +5,9 @@ import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -29,14 +32,20 @@ public class FeedbackServiceImpl implements FeedbackService {
 		return mapper.map(feedback, FeedbackDto.class);
 	}
 
-	public List<FeedbackDto> getAllFeedback() {
-		return feedbackRepository.findAll().stream().map(feedback -> {
-			FeedbackDto dto = new FeedbackDto();
-			dto.setName(feedback.getName());
-			dto.setEmail(feedback.getEmail());
-			dto.setMessage(feedback.getMessage());
-			dto.setProduct(feedback.getProduct());
-			return dto;
-		}).collect(Collectors.toList());
-	}
+	
+	//new pagination technique
+
+@Override
+public Page<FeedbackDto> getAllFeedback(Pageable pageable) {
+    // Fetch the paginated data from the repository
+    Page<Feedback> feedbackPage = feedbackRepository.findAll(pageable);
+    
+    // Convert the list of Feedback entities to FeedbackDto
+    List<FeedbackDto> feedbackDtos = feedbackPage.stream()
+            .map(feedback -> mapper.map(feedback, FeedbackDto.class))
+            .collect(Collectors.toList());
+    
+    // Return the paginated list of FeedbackDto, with metadata
+    return new PageImpl<FeedbackDto>(feedbackDtos, pageable, feedbackPage.getTotalElements());
+}
 }

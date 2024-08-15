@@ -108,7 +108,6 @@ const Registration = () => {
             <option value="EMPLOYEE">EMPLOYEE</option>
             <option value="FARMER">FARMER</option>
             <option value="ACCOUNTANT">ACCOUNTANT</option>
-            <option value="ADMIN">Admin</option>
           </select>
         </div>
         <div>

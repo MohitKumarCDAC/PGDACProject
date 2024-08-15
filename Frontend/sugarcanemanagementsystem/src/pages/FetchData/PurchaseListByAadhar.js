@@ -64,7 +64,7 @@ const PurchaseListPage = () => {
           />
         </div>
       )}
-      <button onClick={handleSearch}>Search </button>
+      <button onClick={handleSearch} className='searchButton'>Search </button>
       {error && <p className="error-message">{error}</p>}
       {purchaseData.length > 0 && <PurchaseDetails purchaseData={purchaseData} />}
     </div>

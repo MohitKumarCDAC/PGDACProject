@@ -32,3 +32,32 @@
     vertical-align: top;
   }
   
+
+
+  /* pagination  */
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  width: 100px;
+  background-color: snow;
+  color: black;
+
+}
+
+.pagination button:hover {
+  background-color: #ffcf40;
+  transform: scale(1.05);
+}
+
+.pagination span {
+  margin: 0 10px;
+}
+

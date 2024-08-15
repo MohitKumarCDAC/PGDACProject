@@ -39,14 +39,17 @@
     padding: 10px;
     border: none;
     border-radius: 4px;
-    background-color: #007bff;
-    color: white;
+    background-color: snow;
+    color: black;
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
 }
 
+
+
 .update-user-page button:hover {
+    background-color: #ffcf40;
     transform: scale(1.05);
 }
 
@@ -57,7 +60,7 @@
 }
 
 .success {
-    color: green;
+    color: snow;
     font-weight: bold;
     text-align: center;
 }

@@ -1,15 +1,31 @@
+
 import React, { useState, useEffect } from 'react';
 import './FeedbackTable.css';
 
 function FeedbackTable() {
   const [feedbacks, setFeedbacks] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/feedback') 
+    fetchFeedbacks(currentPage);
+  }, [currentPage]);
+
+  const fetchFeedbacks = (page) => {
+    fetch(`http://localhost:8080/api/feedback?page=${page}&size=2`)  // Adjust size as needed
       .then(response => response.json())
-      .then(data => setFeedbacks(data))
+      .then(data => {
+        setFeedbacks(data.content);
+        setTotalPages(data.totalPages);
+      })
       .catch(error => console.error('Error fetching feedback:', error));
-  }, []);
+  };
+
+  const handlePageChange = (newPage) => {
+    if (newPage >= 0 && newPage < totalPages) {
+      setCurrentPage(newPage);
+    }
+  };
 
   return (
     <div className="feedback-table-container">
@@ -34,8 +50,25 @@ function FeedbackTable() {
           ))}
         </tbody>
       </table>
+
+      <div className="pagination">
+        <button 
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 0}
+        >
+          Previous
+        </button>
+        <span>Page {currentPage + 1} of {totalPages}</span>
+        <button
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages - 1}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 }
 
 export default FeedbackTable;
+
