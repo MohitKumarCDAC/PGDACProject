@@ -14,6 +14,7 @@ import com.app.dto.UserDto;
 import com.app.dto.UserUpdateDto;
 import com.app.entity.Role;
 import com.app.entity.User;
+import com.app.exception.DuplicateEntryException;
 import com.app.exception.InvalidCredentialsException;
 import com.app.exception.UserNotFoundException;
 import com.app.repositry.UserRepository;
@@ -32,18 +33,7 @@ public class UserServiceImpl implements UserService {
 	private PasswordEncoder passwordEncoder;
 	
 	
-//	
-//	@Override
-//	public UserDto registerUser(UserDto userDto) {
-//		// convert Dto to entity
-//		User user = mapper.map(userDto, User.class);
-//		
-//		//Encrypt the password before saving
-//		user.setPassword(passwordEncoder.encode(userDto.getPassword()));
-//		
-//		User savedUser = userRepo.save(user);
-//		return mapper.map(savedUser, UserDto.class);
-//	}
+
 	@Override
 	public UserDto registerUser(UserDto userDto) {
 	    try {
@@ -53,6 +43,10 @@ public class UserServiceImpl implements UserService {
 	        // Encrypt the password before saving
 	        String encodedPassword = passwordEncoder.encode(userDto.getPassword());
 	        user.setPassword(encodedPassword);
+	        
+	        if(userRepo.findByAadharNumber(user.getAadharNumber()) != null) {
+	        	throw new DuplicateEntryException("User with " + user.getAadharNumber() + " already exists");
+	        }
 
 	        // Save user to repository
 	        User savedUser = userRepo.save(user);
@@ -69,23 +63,7 @@ public class UserServiceImpl implements UserService {
 
 	
 	
-//	@Override
-//	public UserDto login(String email, String aadharNumber, String password) {
-//		User user = null;
-//
-//		if (email != null && !email.isEmpty()) {
-//			user = userRepo.findByEmailAndPassword(email, passwordEncoder.encode(password));
-//		} else if (aadharNumber != null && !aadharNumber.isEmpty()) {
-//			user = userRepo.findByAadharNumberAndPassword(aadharNumber, passwordEncoder.encode(password));
-//		}
-//
-//		if (user == null || !passwordEncoder.matches(password,user.getPassword())) {
-//			throw new InvalidCredentialsException("Invalid email/Aadhar number or password.");
-//		}
-//
-//		// Map to DTO if needed
-//		return mapper.map(user, UserDto.class);
-//	}
+
 	@Override
 	public UserDto login(String email, String aadharNumber, String password) {
 	    User user = null;

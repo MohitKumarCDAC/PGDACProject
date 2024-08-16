@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.app.dto.CustomerDto;
 import com.app.dto.SalesDto;
 import com.app.exception.AadharNumberNotFound;
+import com.app.exception.DuplicateEntryException;
 import com.app.services.CustomerServiceImpl;
 
 @RestController
@@ -29,8 +30,12 @@ public class CustomerController {
 
 	@PostMapping("/add")
 	public ResponseEntity<?> addCustomer(@RequestBody CustomerDto customerDto) {
+		try {
 		CustomerDto customer = custdetailsServices.addCustomer(customerDto);
 		return ResponseEntity.status(HttpStatus.CREATED).body(customer);
+		}catch (DuplicateEntryException e) {
+			return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
+		}
 	}
 
 	@PostMapping("/add_sales")
