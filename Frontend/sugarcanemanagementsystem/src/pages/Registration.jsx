@@ -38,7 +38,7 @@ const Registration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/api/user', formData);
+      const response = await axios.post('http://localhost:8080/api/user/register', formData);
       setSuccessMessage('Registration successful!');
       setError('');
     } catch (error) {
@@ -170,3 +170,4 @@ const Registration = () => {
 };
 
 export default Registration;
+

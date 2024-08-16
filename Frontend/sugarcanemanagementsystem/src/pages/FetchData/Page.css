@@ -32,7 +32,7 @@
 }
 
 .search-toggle button {
-  background-color: snow;
+  background-color: rgb(220, 215, 215);
   color: black;
   border: none;
   padding: 10px 20px;
@@ -97,6 +97,6 @@
 
 .searchButton
 {
-  background-color: snow;
+  background-color: rgb(220, 215, 215);
   color: black;
 }

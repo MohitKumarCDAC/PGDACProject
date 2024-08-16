@@ -5,14 +5,18 @@ import './FeedbackTable.css';
 function FeedbackTable() {
   const [feedbacks, setFeedbacks] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
+
+  //use pagination technique
   const [totalPages, setTotalPages] = useState(0);
+
+  //hooks
 
   useEffect(() => {
     fetchFeedbacks(currentPage);
   }, [currentPage]);
 
   const fetchFeedbacks = (page) => {
-    fetch(`http://localhost:8080/api/feedback?page=${page}&size=2`)  // Adjust size as needed
+    fetch(`http://localhost:8080/api/feedback?page=${page}&size=2`)  
       .then(response => response.json())
       .then(data => {
         setFeedbacks(data.content);
@@ -20,7 +24,8 @@ function FeedbackTable() {
       })
       .catch(error => console.error('Error fetching feedback:', error));
   };
-
+  
+// pageChange
   const handlePageChange = (newPage) => {
     if (newPage >= 0 && newPage < totalPages) {
       setCurrentPage(newPage);
