@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import './pageCSS/carousel.css'; // Make sure to create this CSS file
+import './pageCSS/carousel.css'; 
 
+//array of data and use it in carousel
 const data = [
   { name: 'Mohit Kumar Gupta', img: '/projectFriends/mohit.jpg', review: 'PG-DAC', Email:'mg97274@gmail.com'},
   { name: 'Akash Bhosale', img: '/projectFriends/akash.jpg', review: 'PG-DAC', Email:'akashhbhosale@gmail.com' },
@@ -13,16 +14,22 @@ const data = [
 function Contact() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  //method to next slide
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
   };
 
+
+// methods to previous slide
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
   };
 
   return (
     <div className='carousel-container'>
+
+      {/* button for previous slide */}
+
       <button className='carousel-button prev' onClick={prevSlide}>‹</button>
       <div className='carousel-slide'>
         <div className='carousel-card'>
@@ -34,6 +41,9 @@ function Contact() {
           </div>
         </div>
       </div>
+
+      {/* button for next slide */}
+      
       <button className='carousel-button next' onClick={nextSlide}>›</button>
     </div>
   );

@@ -10,6 +10,7 @@ import { FaUser } from 'react-icons/fa';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+
     const { userInfo } = useSelector((state) => state.login);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -115,6 +116,8 @@ const Header = () => {
                             
                         )}
                          
+{/* here we write for when user is login the login button is change into logout and when
+user is logout the logout button is change into login */}
 
                         {!userInfo && (
                            <NavDropdown title="Login" id="login-dropdown">
