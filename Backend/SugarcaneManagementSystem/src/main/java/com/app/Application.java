@@ -26,18 +26,21 @@ public class Application {
 	@Bean
 	public ModelMapper modelMapper() {
 		ModelMapper modelMapper = new ModelMapper();
+		
 		modelMapper.addMappings(new PropertyMap<Purchase, PurchaseDto>() {
 			@Override
 			protected void configure() {
 				map(source.getFarmer().getAadharNumber(), destination.getAadharNumber());
 			}
 		});
+		
 		modelMapper.addMappings(new PropertyMap<Sales, SalesDto>() {
 			@Override
 			protected void configure() {
 				map(source.getCustomer().getAadharNumber(), destination.getAadharNumber());
 			}
 		});
+		
 		modelMapper.addMappings(new PropertyMap<Salary, SalaryDto>() {
 			@Override
 			protected void configure() {

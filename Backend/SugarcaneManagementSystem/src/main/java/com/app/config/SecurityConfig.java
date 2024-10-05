@@ -3,13 +3,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-import lombok.NonNull;
 
 @Configuration
 @EnableWebSecurity
@@ -35,10 +32,20 @@ public class SecurityConfig {
                 .permitAll()
             .and()
             .logout()
-                .permitAll();
+                .permitAll()
+                .and()
+                .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)// Create a session only if necessary
+                .maximumSessions(1)// Allow only one session per user
+                .expiredUrl("/login?expired=true")// Redirect(login page) when session expires
+                .and()
+                .sessionFixation().migrateSession();
+        
         return http.build();
     }
 
+    
+    //password Encoder
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();

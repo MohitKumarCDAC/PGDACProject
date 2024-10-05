@@ -28,7 +28,7 @@ public class FeedbackController {
         return ResponseEntity.ok(savedFeedback);
     }
 
-
+//here we use pageable is a interface and predefine in jpa repositry
     @GetMapping
     public ResponseEntity<?> getAllFeedback(
         @RequestParam(defaultValue = "0") int page,
